@@ -1,6 +1,9 @@
 package application;
 
 import java.io.IOException;
+
+import application.movement;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -19,9 +22,22 @@ import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.fxml.Initializable;
+import javafx.scene.input.ClipboardContent;
+import javafx.scene.input.Dragboard;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.input.TransferMode;
 import javafx.stage.Stage;
+
+
+import javafx.application.*;
+import javafx.scene.paint.*;
+
+import javafx.scene.*;
+import javafx.scene.effect.*;
+import javafx.scene.image.*;
+import javafx.animation.*;
 
 
 
@@ -33,7 +49,7 @@ import javafx.stage.Stage;
 public  class SampleController implements Initializable{
 	
 	
-	
+	@FXML
 	public void changescreenbutton (ActionEvent event ) throws IOException{
 		
 		
@@ -43,7 +59,7 @@ public  class SampleController implements Initializable{
 		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow(); 
 		window.setScene(parentscene);
 		 window.setResizable(false);
-	        window.centerOnScreen();
+	    window.centerOnScreen();
 		window.show();
 		
 	}
@@ -52,7 +68,7 @@ public  class SampleController implements Initializable{
 	@FXML private RadioButton radioButton;
 	@FXML private RadioButton radioButton2;
 
-	@FXML private TextField textfield;
+
 	@FXML private TextArea textarea;
 	
 
@@ -102,22 +118,23 @@ public  class SampleController implements Initializable{
 	    
 	    
 	   
-	    
+
+		  
+	    @FXML
+	    private void circle3vis(ActionEvent event) {
+	    	
+	    }
+	    @FXML
+	    private void handlebuttonaction2(ActionEvent event) {
+	    	
+	    }
 	    
 	    
 	    
 	    @FXML
-	private void circle3vis(KeyEvent event) {
-		
-		while (radioButton2.isSelected()==true) {
-			
-			circle3.setVisible(false);
-			
-		}
-		
-	}
-	
-	  
+	    private void handlebuttonaction(ActionEvent event) {
+	    	
+	    }
 	    
 	   
 	    @FXML
@@ -126,32 +143,31 @@ public  class SampleController implements Initializable{
 	    	
 	    	if (circle1.isSelected() == true && circle2.isSelected()==true) {
 	    		String input = Label.getText();
-	    		
+	    	
 	    		label5.setText(input);
 	    		label5.setVisible(true);
 		    	event.consume();
 	    		
-	    	}else if (circle1.isSelected()==true && circle2.isSelected()==false && circle3.isSelected()==false) {
+	    	} if (circle1.isSelected()==true && circle2.isSelected()==false ) {
 	    		String input = Label.getText();
-	    	 label2.setText(input);
-	    	 label2.setVisible(true);
+	    	// label2.setText(input);
+		    	  label2.setText(input + "\n");
+
+	    		label2.setVisible(true);
+	    	 
+			 
+	    	 //label2.setVisible(true);
 	    	 event.consume(); 
+	        }
 	        }
 	        	
 	        }
-	    }
-	        
-	       
 	    
-	    
-	    
-	    
+	   
 
 	    @Override
 	    public void initialize (URL location, ResourceBundle resources) {
 	     
-	    
-	   
 	    }
 	    
 	    
@@ -160,17 +176,17 @@ public  class SampleController implements Initializable{
 	    
 	    @FXML
 	    private void initialize() {
-	        ToggleGroup group = new ToggleGroup();
+	    	
+	    ToggleGroup group = new ToggleGroup();
 	    radioButton.setToggleGroup(group);
 	    radioButton2.setToggleGroup(group);
-	       textfield.setVisible(false);
 	       label1.setVisible(false);
-	       
-	       
-	    }
+	  
+}
 	    
-
-	
+	    
+	    
+	    
 }
 
 

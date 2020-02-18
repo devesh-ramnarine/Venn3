@@ -15,21 +15,40 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
 
 	<children>
-		<Pane layoutX="300.0" prefHeight="720.0" prefWidth="980.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"> 
-			<children>
-            <TextField fx:id="textfield" layoutX="20.0" layoutY="75.0" opacity="0.0" prefHeight="600.0" prefWidth="929.0" />
-            <TextArea fx:id="textarea1" prefHeight="720.0" prefWidth="980.0" visible="false" />
-				<TextField fx:id="circle2title" alignment="CENTER" layoutX="545.0" layoutY="23.0" prefHeight="26.0" prefWidth="231.0" promptText="Title2" /> 
+      <ScrollPane prefHeight="800.0" prefWidth="300.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="300.0">
+               <children>
+                  <TextArea fx:id="textarea1" layoutX="10.0" layoutY="57.0" onKeyPressed="#enterbutton" opacity="0.0" prefHeight="32.0" prefWidth="250.0" AnchorPane.bottomAnchor="631.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="57.0" />
+                  <TextField fx:id="Label" layoutX="14.0" layoutY="57.0" onAction="#enterbutton" onKeyPressed="#enterbutton" prefHeight="26.0" prefWidth="242.0" promptText="Enter your label" />
+                  <CheckBox fx:id="circle1" layoutX="46.0" layoutY="98.0" mnemonicParsing="false" selected="true" text="1" />
+                  <CheckBox fx:id="circle2" layoutX="116.0" layoutY="98.0" mnemonicParsing="false" text="2" />
+                  <CheckBox fx:id="circle3" layoutX="190.0" layoutY="98.0" mnemonicParsing="false" text="3" />
+                  <Label fx:id="category1" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="118.0" text="Number of Circles" />
+                  <RadioButton fx:id="radioButton" layoutX="135.0" layoutY="12.0" mnemonicParsing="false" onAction="#changescreenbutton" selected="true" text="2">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="number_of_circles" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="radioButton2" layoutX="190.0" layoutY="12.0" mnemonicParsing="false" onAction="#changescreenbutton" text="3" toggleGroup="$number_of_circles" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+		<Pane layoutX="300.0" prefHeight="800.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"> 
+			<children> 
 				<Button fx:id="button4" layoutX="893.0" layoutY="643.0" mnemonicParsing="false" text="Button" /> 
 				<Button layoutX="910.0" layoutY="65.0" mnemonicParsing="false" text="Button" /> 
-				<Button fx:id="button3" layoutX="893.0" layoutY="20.0" mnemonicParsing="false" onAction="#changescreenbutton" prefHeight="32.0" prefWidth="70.0" text="Button" /> 
-				<TextField fx:id="circle1title" alignment="CENTER" layoutX="195.0" layoutY="23.0" prefHeight="26.0" prefWidth="250.0" promptText="Title1" /> 
-				<Circle fill="TRANSPARENT" layoutX="648.0" layoutY="375.0" radius="300.0" stroke="#0000fa" strokeType="INSIDE" strokeWidth="4.0" /> 
-				<Circle fill="TRANSPARENT" layoutX="320.0" layoutY="375.0" radius="300.0" stroke="RED" strokeType="INSIDE" strokeWidth="4.0" />
+				<Button fx:id="button3" layoutX="893.0" layoutY="20.0" mnemonicParsing="false" onAction="#handlebuttonaction" prefHeight="32.0" prefWidth="70.0" text="Button" /> 
+				<TextField fx:id="circle1title" alignment="CENTER" layoutX="195.0" layoutY="23.0" prefHeight="26.0" prefWidth="250.0" promptText="Title1" />
+				<TextField fx:id="circle2title" alignment="CENTER" layoutX="545.0" layoutY="23.0" prefHeight="26.0" prefWidth="231.0" promptText="Title2" /> 
+				<Circle fill="TRANSPARENT" layoutX="320.0" layoutY="375.0" radius="300.0" stroke="RED" strokeType="INSIDE" strokeWidth="4.0" /> 
+				<Circle fill="TRANSPARENT" layoutX="648.0" layoutY="375.0" radius="300.0" stroke="#0000fa" strokeType="INSIDE" strokeWidth="4.0" />
             <Label fx:id="label1" layoutX="138.0" layoutY="242.0" prefHeight="78.0" prefWidth="107.0" text="Label" visible="false" />
             <Label fx:id="label2" layoutX="243.0" layoutY="143.0" text="Label" visible="false" />
             <Label fx:id="label3" layoutX="211.0" layoutY="351.0" text="Label" visible="false" />
@@ -37,27 +56,9 @@
             <Label fx:id="label5" layoutX="445.0" layoutY="311.0" text="Label" visible="false" />
             <Label fx:id="label6" layoutX="122.0" layoutY="311.0" text="Label" visible="false" />
             <Label fx:id="label7" layoutX="154.0" layoutY="198.0" text="Label" visible="false" />
-            <Label fx:id="label8" layoutX="245.0" layoutY="281.0" text="Label" visible="false" /> 
+            <Label fx:id="label8" layoutX="245.0" layoutY="281.0" text="Label" visible="false" />
+            <Text layoutX="180.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" /> 
 			</children>
 		</Pane>
-		<ScrollPane prefHeight="720.0" prefWidth="300.0"> 
-			<content>
-				<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="720.0" prefWidth="300.0"> 
-					<children>
-                  <TextArea fx:id="textarea" layoutX="10.0" layoutY="57.0" onKeyPressed="#enterbutton" opacity="0.0" prefHeight="32.0" prefWidth="250.0" AnchorPane.bottomAnchor="631.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="57.0" />
-						<TextField fx:id="Label" layoutX="14.0" layoutY="57.0" onAction="#enterbutton" onKeyPressed="#enterbutton" prefHeight="26.0" prefWidth="242.0" promptText="Enter your label" /> 
-						<CheckBox fx:id="circle1" layoutX="46.0" layoutY="98.0" mnemonicParsing="false" selected="true" text="1" /> 
-						<CheckBox fx:id="circle2" layoutX="116.0" layoutY="98.0" mnemonicParsing="false" text="2" /> 
-      						<Label fx:id="category1" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="118.0" text="Number of Circles" />
-                  <RadioButton fx:id="radioButton" layoutX="135.0" layoutY="12.0" mnemonicParsing="false" selected="true" text="2">
-                     <toggleGroup>
-                        <ToggleGroup fx:id="number_of_circles" />
-                     </toggleGroup>
-                  </RadioButton>
-                  <RadioButton fx:id="radioButton2" layoutX="190.0" layoutY="12.0" mnemonicParsing="false" onAction="#changescreenbutton" text="3" toggleGroup="$number_of_circles" /> 
-					</children>
-				</AnchorPane>
-			</content>
-		</ScrollPane>
 	</children>
 </AnchorPane>

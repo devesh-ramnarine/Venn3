@@ -2,6 +2,7 @@ package application;
 
 import application.Main;
 
+
 import java.io.IOException;
 
 import application.Circle3diagram;
@@ -111,7 +112,7 @@ import javafx.stage.Stage;
 			Stage window = (Stage)((Node)event.getSource()).getScene().getWindow(); 
 			window.setScene(parentscene);
 			 window.setResizable(false);
-		        window.centerOnScreen();
+		     window.centerOnScreen();
 			window.show();
 			
 		}
@@ -148,8 +149,8 @@ import javafx.stage.Stage;
 			Scene parentscene = new Scene (parent);
 			Stage window = (Stage)((Node)event.getSource()).getScene().getWindow(); 
 			window.setScene(parentscene);
-			 window.setResizable(false);
-		        window.centerOnScreen();
+			window.setResizable(false);
+		    window.centerOnScreen();
 			window.show();
 			
 		}
