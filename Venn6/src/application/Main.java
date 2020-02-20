@@ -4,6 +4,8 @@ package application;
 
 
 
+
+
 import javafx.application.Application;
 
 
@@ -57,12 +59,23 @@ public class Main extends Application  {
 		 	
 		     Parent root = FXMLLoader.load(getClass().getResource("Sample.fxml"));
 		        primaryStage.setTitle("Venn Diagram Application");
-		        
+		       
 		        primaryStage.centerOnScreen();
-		        primaryStage.setScene(new Scene(root, 1280, 800));
+		        primaryStage.setHeight(825);
+		        primaryStage.setWidth(1280);
 		        
+		        Scene master = new Scene(root,1280,800);
+		        
+		        master.getStylesheets().add(getClass().getResource("Sample.css").toExternalForm());
+		        primaryStage.setScene(master);
+		        
+		        
+		        
+		     //   primaryStage.setScene(new Scene(root, 1280, 800));
+		  
+
 		        primaryStage.setResizable(false);
-			     primaryStage.centerOnScreen();
+			    primaryStage.centerOnScreen();
 		        primaryStage.show();
 		    
 				

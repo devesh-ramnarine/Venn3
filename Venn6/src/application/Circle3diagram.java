@@ -129,7 +129,7 @@ import javafx.stage.Stage;
 		    	event.consume();
 	    		
 	    	}else if (circle1.isSelected()==true && circle2.isSelected()==false && circle3.isSelected()==false) {
-	    		String input = Label.getText();
+	    			String input = Label.getText();
 	    	 label2.setText(input);
 	    	 label2.setVisible(true);
 	    	 event.consume(); 
