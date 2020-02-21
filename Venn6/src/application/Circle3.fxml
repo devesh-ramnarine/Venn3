@@ -39,6 +39,7 @@
                   <Circle fill="TRANSPARENT" layoutX="600.0" layoutY="450.0" radius="200.0" stroke="#0000fa" strokeType="INSIDE" strokeWidth="4.0" />
                   <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#9c4a4a00" height="600.0" layoutX="198.0" layoutY="-390.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="600.0" y="450.0" />
                   <TextField fx:id="circle1title1" alignment="CENTER" layoutX="643.0" layoutY="662.0" prefHeight="26.0" prefWidth="250.0" promptText="Title3" />
+                  <TextArea layoutX="38.0" layoutY="60.0" prefHeight="200.0" prefWidth="200.0" styleClass="textarea" />
                </children>
             </Pane>
          </children>
