@@ -1,8 +1,9 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 
 
-.root{
-	abc :#0000
+*{
+	
+	
 	}
 
 .background{
@@ -12,8 +13,8 @@
 	-fx-text-box-border:none;
 	-fx-font-size:100%;
 }
-.title:selected{
-	-fx-text-box-border:1px solid;
+.title:selected:error{
+	-fx-text-box-border:'1px' solid;
 	-fx-text-box-border:'#0000';
 	
 -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
