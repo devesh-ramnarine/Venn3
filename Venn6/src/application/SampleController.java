@@ -127,8 +127,8 @@ public class SampleController implements Initializable {
 				label5.setText(input);
 				label5.setVisible(true);
 				event.consume();
-
 			}
+			
 			if (circle1.isSelected() == true && circle2.isSelected() == false) {
 				String input = Label.getText();
 				// label2.setText(input);
