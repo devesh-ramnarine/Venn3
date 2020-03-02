@@ -7,7 +7,7 @@
 	}
 
 .background{
-	-fx-background-color: none;
+	
 }
 .title{
 	-fx-text-box-border:none;
@@ -32,15 +32,17 @@
 	-fx-stroke:rgba(0,0,200,0.5);
 	-fx-stroke-width:2;
 -fx-fill: rgba(0,0,200,0.3);
+-fx-blend-mode: multiply;
+
 }
 .butt{
 	-fx-background-radius:0;
-	-fx-background-color:'#004982';
+	
 	-fx-text-fill: #fff;
 }
 .butt:focused{
 	-fx-background-radius:0;
-	-fx-background-color:'#0083E8';
+	
 	-fx-text-fill: #fff;
 }
 
