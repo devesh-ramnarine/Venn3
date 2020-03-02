@@ -1,8 +1,5 @@
 package application;
 
-import application.Main;
-
-
 import java.io.IOException;
 
 import application.Circle3diagram;
@@ -25,7 +22,6 @@ import javafx.scene.control.Button;
 	import javafx.scene.control.ToggleGroup;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 	public class Circle3diagram {
