@@ -1,0 +1,50 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+
+*{
+	
+	
+	}
+
+.background{
+	
+}
+.title{
+	-fx-text-box-border:none;
+	-fx-font-size:100%;
+}
+.title:selected:error{
+	-fx-text-box-border:'1px' solid;
+	-fx-text-box-border:'#0000';
+	
+-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+	
+}
+.checkboxes{
+	
+}
+.circle1{
+	-fx-stroke:rgba(200,0,0,0.5);
+	-fx-stroke-width:2;
+-fx-fill: rgba(200,0,0,0.3);
+}
+.circle2{
+	-fx-stroke:rgba(0,0,200,0.5);
+	-fx-stroke-width:2;
+-fx-fill: rgba(0,0,200,0.3);
+-fx-blend-mode: multiply;
+
+}
+.butt{
+	-fx-background-radius:0;
+	
+	-fx-text-fill: #fff;
+}
+.butt:focused{
+	-fx-background-radius:0;
+	
+	-fx-text-fill: #fff;
+}
+
+
+
