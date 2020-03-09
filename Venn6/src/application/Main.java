@@ -41,6 +41,7 @@ public class Main extends Application {
 			primaryStage.setResizable(false);
 			primaryStage.centerOnScreen();
 			primaryStage.show();
+			// fkgheuilghrf
 
 		} catch (Exception e) {
 			e.printStackTrace();
